@@ -16,9 +16,6 @@ import java.util.ResourceBundle;
 
 public class ScheduleEditController {
     private String login = LoginController.getLoginText();
-    private static String schoolNumber = "1";
-    private static String schoolKey = "a";
-    private static String semesterKey = "first_semester";
     private static String query;
     private LessonsData lessonsData = new LessonsData();
 
@@ -72,6 +69,9 @@ public class ScheduleEditController {
     void initialize() {
         schoolTable1.setEditable(true);
 
+        String schoolNumber = "1";
+        String schoolKey = "a";
+        String semesterKey = "first_semester";
         lessonsData.intiDate(login, schoolNumber, schoolKey, semesterKey, query, tableViewers);
         GetUsers GetUsers = new GetUsers();
         GetUsers.getUserName(login);
@@ -106,6 +106,8 @@ public class ScheduleEditController {
         schoolSelect.getItems().addAll("1", "2", "3", "4", "5", "6", "7", "8", "9");
         schoolSelect1.getItems().addAll("ա", "բ", "գ", "դ");
         semesterSelect.getItems().addAll("1-ին Կիսամյակ","2րդ Կիսամյակ");
+        lessonsData.SwitchClass(schoolSelect);
+        lessonsData.SwitchClassKey(schoolSelect1, semesterSelect, schoolTable1, tableViewers, login, query);
         LessonsEdit(mondayColumn1);
         LessonsEdit(tuesdayColumn1);
         LessonsEdit(wednesdayColumn1);

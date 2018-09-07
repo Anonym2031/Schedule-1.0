@@ -1,14 +1,17 @@
 package Schedule.Layouts.LoginLayout;
 
+import Schedule.DataBase.Const;
+import Schedule.DataBase.DataBaseHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import Schedule.DataBase.Const;
-import Schedule.DataBase.DataBaseHandler;
 
 import java.io.IOException;
 import java.net.URL;
@@ -44,58 +47,20 @@ public class LoginController extends DataBaseHandler {
     @FXML
     void initialize() {
     //login button event
-        sign.setOnMouseClicked(event -> {
-                    sign.setStyle("-fx-background-color: GREEN");
-                    try {
-                        TimeUnit.SECONDS.sleep((long) 0.5);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    loginText = user.getText().trim();
-                    String passwordText = password.getText().trim();
-                    if (!loginText.equals("") && !passwordText.equals("")) {
-                        boolean rc = loginUser(user.getText().trim(), password.getText().trim());
-                        if (rc) {
-
-                            sign.getScene().getWindow().hide();
-                            FXMLLoader loader = new FXMLLoader();
-                            loader.setLocation(getClass().getResource("/Schedule/Layouts/WelcomeLayout/SetOrView.fxml"));
-                            try {
-                                loader.load();
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
-                            Parent root = loader.getRoot();
-                            Stage stage = new Stage();
-                            stage.setResizable(false);
-                            stage.setMaximized(false);
-                            stage.setScene(new Scene(root));
-                            stage.getIcons().add(new Image("assets/school.png"));
-                            stage.setTitle("Dasacucak 1.0");
-                            stage.showAndWait();
-                        } else {
-                            Alert alert = new Alert(Alert.AlertType.ERROR);
-                            alert.setTitle("Մուտք");
-                            alert.setHeaderText(null);
-                            alert.setContentText("Սխալ մուտքանուն կամ գաղտնաբառ");
-                            alert.showAndWait();
-                            try {
-                                TimeUnit.SECONDS.sleep((long) 0.2);
-                            } catch (InterruptedException e) {
-                                e.printStackTrace();
-                            }
-                            sign.setStyle("-fx-background-color: ORANGE");
-                        }
-                    }
-
-
-                }
-
-        );
+        sign.setOnMouseClicked(event -> ButtonSelect(sign));
+        sign.setOnMouseMoved(event ->
+                sign.setStyle("-fx-background-color: green ; -fx-background-radius: 20 ;-fx-border-radius: 20 ; -fx-border-color: silver "));
+        sign.setOnMouseExited(event ->
+                sign.setStyle("-fx-background-color: orange  ; -fx-background-radius: 20 ;-fx-border-radius: 20 ; -fx-border-color: silver "));
+        password.setOnKeyPressed(ke -> {
+            if (ke.getCode().getName().equals("Enter")) {
+                ButtonSelect(sign);
+            }
+        });
 
     }
 
-    //Connection to DataBase and cheking  user
+    //Connection to DataBase and checking  user
     private boolean loginUser(String loginText, String passwordText) {
         boolean rc = false;
         Statement st = null;
@@ -134,6 +99,57 @@ public class LoginController extends DataBaseHandler {
             }
         }
         return rc;
+    }
+
+    private void ButtonSelect(Button sign) {
+        {
+            sign.setStyle("-fx-background-color: red  ; -fx-background-radius: 20 ;-fx-border-radius: 20 ; -fx-border-color: silver ");
+            try {
+                TimeUnit.SECONDS.sleep((long) 0.5);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            loginText = user.getText().trim();
+            String passwordText = password.getText().trim();
+            if (!loginText.equals("") && !passwordText.equals("")) {
+                boolean rc = loginUser(user.getText().trim(), password.getText().trim());
+                if (rc) {
+
+                    sign.getScene().getWindow().hide();
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(getClass().getResource("/Schedule/Layouts/WelcomeLayout/SetOrView.fxml"));
+                    try {
+                        loader.load();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    Parent root = loader.getRoot();
+                    Stage stage = new Stage();
+                    stage.setResizable(false);
+                    stage.setMaximized(false);
+                    stage.setScene(new Scene(root));
+                    stage.getIcons().add(new Image("assets/school.png"));
+                    stage.setTitle("Schedule 1.0");
+                    stage.showAndWait();
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Մուտք");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Սխալ մուտքանուն կամ գաղտնաբառ");
+                    alert.showAndWait();
+                    try {
+                        TimeUnit.SECONDS.sleep((long) 0.2);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    sign.setStyle("-fx-background-color: ORANGE  ; -fx-background-radius: 20 ;-fx-border-radius: 20 ; -fx-border-color: silver");
+                }
+            }
+
+
+        }
+
+
     }
 
 

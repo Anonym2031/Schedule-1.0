@@ -73,6 +73,10 @@ public class SetOrViewController {
                 exc.printStackTrace();
             }
         });
+        EditText.setOnMouseMoved(event ->
+                EditText.setStyle("-fx-background-color: green ; -fx-background-radius: 20 ;-fx-border-radius: 20 ; -fx-border-color: silver "));
+        EditText.setOnMouseExited(event ->
+                EditText.setStyle("-fx-background-color: orange  ; -fx-background-radius: 20 ;-fx-border-radius: 20 ; -fx-border-color: silver "));
 
         //Schedule view button event
         ViewText.setOnMouseClicked(event -> {
@@ -98,6 +102,10 @@ public class SetOrViewController {
                 exc.printStackTrace();
             }
         });
+        ViewText.setOnMouseMoved(event ->
+                ViewText.setStyle("-fx-background-color: green ; -fx-background-radius: 20 ;-fx-border-radius: 20 ; -fx-border-color: silver "));
+        ViewText.setOnMouseExited(event ->
+                ViewText.setStyle("-fx-background-color: orange  ; -fx-background-radius: 20 ;-fx-border-radius: 20 ; -fx-border-color: silver "));
 
         //back page button event
         back.setOnMouseClicked(event -> {
