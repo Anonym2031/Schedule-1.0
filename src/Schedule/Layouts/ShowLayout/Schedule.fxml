@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #0a0042;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Schedule.Layouts.ShowLayout.SchoolController">
+    <AnchorPane layoutY="133.0" prefHeight="471.0" prefWidth="800.0" style="-fx-background-color: fafafa;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="133.0">
+        <Label fx:id="directorName" layoutX="16.0" layoutY="16.0" prefHeight="26.0" prefWidth="723.0" text="Բարի գալուստ հարգելի ? ? դասացուցակը դիտելու համար ընտրեք դասարանը" textFill="#2d029a" wrapText="true" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="60.799999999999955">
+            <font>
+                <Font name="Lucida Sans Regular" size="15.0" />
+            </font>
+        </Label>
+        <TableView fx:id="schoolTable" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #fafafa; -fx-border-radius: 7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="103.0">
+            <columns>
+            <TableColumn fx:id="idColumn" minWidth="-Infinity" prefWidth="29.600006103515625" />
+                <TableColumn fx:id="mondayColumn" maxWidth="300.0" minWidth="-Infinity" prefWidth="131.19998168945312" text="Երկուշաբթի" />
+                <TableColumn fx:id="tuesdayColumn" maxWidth="300.0" minWidth="-Infinity" prefWidth="154.4000244140625" text="Երեքշաբթի" />
+                <TableColumn fx:id="wednesdayColumn" maxWidth="300.0" minWidth="-Infinity" prefWidth="160.0" text="Չորեքշաբթի" />
+                <TableColumn fx:id="thursdayColumn" maxWidth="300.0" prefWidth="160.0" text="Հինգշաբթի" />
+                <TableColumn fx:id="fridayColumn" maxWidth="300.0" prefWidth="162.4000244140625" text="Ուրբաթ" />
+            </columns>
+         <effect>
+            <DropShadow />
+         </effect>
+        </TableView>
+      <ComboBox fx:id="schoolSelect" layoutX="30.0" layoutY="63.0" prefHeight="27.0" prefWidth="96.0" style="-fx-border-color: silver; -fx-background-color: #fafafa; -fx-border-radius: 7;" value="1" AnchorPane.leftAnchor="30.0">
+
+      </ComboBox>
+      <ComboBox fx:id="schoolSelect1" layoutX="150.0" layoutY="63.0" prefHeight="27.0" prefWidth="96.0" style="-fx-border-color: silver; -fx-background-color: #fafafa; -fx-border-radius: 7;" value="ա" AnchorPane.leftAnchor="150.0" />
+      <ComboBox fx:id="semesterSelect" layoutX="261.0" layoutY="63.0" prefHeight="27.0" prefWidth="189.0" style="-fx-border-color: silver; -fx-background-color: #fafafa; -fx-border-radius: 7;" value="1-ին Կիսամյակ" AnchorPane.leftAnchor="261.0" AnchorPane.topAnchor="63.0" />
+    </AnchorPane>
+    <Label layoutX="14.0" layoutY="23.0" text="Դասացուցակ" textFill="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="20.0">
+        <font>
+            <Font name="Sylfaen" size="39.0" />
+        </font>
+    </Label>
+    <ImageView fitHeight="91.0" fitWidth="84.0" layoutX="690.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="14.0">
+        <Image url="@../../../assets/school.png" />
+    </ImageView>
+    <Label fx:id="schoolName" layoutX="413.0" layoutY="43.0" text="Դպրոց - " textFill="WHITE" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="43.0">
+        <font>
+          <Font name="Lucida Sans Regular" size="16.0" />
+        </font>
+    </Label>
+    <ImageView fx:id="back" fitHeight="50.0" fitWidth="61.0" layoutX="14.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="73.0">
+        <image>
+            <Image url="@../../../assets/back.png" />
+        </image>
+      <effect>
+         <DisplacementMap>
+            <mapData>
+               <FloatMap />
+            </mapData>
+         </DisplacementMap>
+      </effect>
+    </ImageView>
+</AnchorPane>
