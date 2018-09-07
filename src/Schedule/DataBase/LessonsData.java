@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableView;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.sql.ResultSet;
@@ -108,6 +109,8 @@ public class LessonsData {
         return schoolKey;
    }
     public void setBack(javafx.scene.image.ImageView back){
+        Image back_selected = new Image("assets/back_selected.png");
+        Image back_image = new Image("assets/back.png");
         back.setOnMouseClicked(event -> {
             back.setStyle("-fx-background-color: GREEN");
             try {
@@ -130,7 +133,11 @@ public class LessonsData {
             } catch (Exception exc) {
                 exc.printStackTrace();
             }
+
         });
+        back.setOnMouseMoved(event -> back.setImage(back_selected));
+        back.setOnMouseExited(event -> back.setImage(back_image));
+
     }
     public void SetLesson(String login , String schoolSelect2, String schoolSelect3 , String newLesson,
                           String query, Integer row , String day, String semesterKey){

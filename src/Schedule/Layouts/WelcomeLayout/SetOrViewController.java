@@ -108,6 +108,10 @@ public class SetOrViewController {
                 ViewText.setStyle("-fx-background-color: orange  ; -fx-background-radius: 20 ;-fx-border-radius: 20 ; -fx-border-color: silver "));
 
         //back page button event
+        Image back_selected = new Image("assets/back_selected.png");
+        Image back_image = new Image("assets/back.png");
+        back.setOnMouseMoved(event -> back.setImage(back_selected));
+        back.setOnMouseExited(event -> back.setImage(back_image));
         back.setOnMouseClicked(event -> {
             back.setStyle("-fx-background-color: GREEN");
             try {

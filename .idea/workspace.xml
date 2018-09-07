@@ -7,7 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Schedule/DataBase/LessonsData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Schedule/DataBase/LessonsData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Schedule/Layouts/WelcomeLayout/SetOrViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Schedule/Layouts/WelcomeLayout/SetOrViewController.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -123,18 +124,20 @@
       <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Schedule/Layouts/LoginLayout/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="53" column="143" selection-start-line="50" selection-start-column="8" selection-end-line="53" selection-end-column="143" />
+            <state relative-caret-position="-1243">
+              <caret line="56" column="35" lean-forward="true" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Schedule/Layouts/LoginLayout/Login.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Schedule/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="23" column="156" lean-forward="true" selection-start-line="23" selection-start-column="128" selection-end-line="23" selection-end-column="156" />
+            <state relative-caret-position="92">
+              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -142,36 +145,29 @@
       <file leaf-file-name="SchoolController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Schedule/Layouts/ShowLayout/SchoolController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="99" column="103" lean-forward="true" selection-start-line="98" selection-start-column="7" selection-end-line="99" selection-end-column="103" />
+            <state relative-caret-position="167">
+              <caret line="100" column="25" selection-start-line="100" selection-start-column="25" selection-end-line="100" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SchoolControllerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/Schedule/Layouts/ShowLayout/SchoolControllerTest.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="TableViewer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Schedule/Layouts/TableLayout/TableViewer.java">
+      <file leaf-file-name="LessonsData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Schedule/DataBase/LessonsData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+            <state relative-caret-position="115">
+              <caret line="111" column="8" lean-forward="true" selection-start-line="111" selection-start-column="8" selection-end-line="112" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TableViewerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/Schedule/Layouts/TableLayout/TableViewerTest.java">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="SetOrViewController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Schedule/Layouts/WelcomeLayout/SetOrViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-571">
-              <caret line="80" column="36" lean-forward="true" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
+            <state relative-caret-position="213">
+              <caret line="112" column="65" selection-start-line="112" selection-start-column="65" selection-end-line="112" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -245,7 +241,6 @@
         <option value="$PROJECT_DIR$/src/Schedule/Layouts/AutoFIllLayout/AutoFillController.java" />
         <option value="$PROJECT_DIR$/src/Schedule/Layouts/AutoFIllLayout/LessonNames.java" />
         <option value="$PROJECT_DIR$/src/Schedule/Layouts/AutoFIllLayout/RandomGenerator.java" />
-        <option value="$PROJECT_DIR$/src/Schedule/DataBase/LessonsData.java" />
         <option value="$PROJECT_DIR$/src/Schedule/DataBase/GetUsers.java" />
         <option value="$PROJECT_DIR$/src/Schedule/DataBase/Configs.java" />
         <option value="$PROJECT_DIR$/src/Schedule/DataBase/Const.java" />
@@ -253,6 +248,7 @@
         <option value="$PROJECT_DIR$/src/Schedule/Main.java" />
         <option value="$PROJECT_DIR$/src/Schedule/Layouts/EditLayout/ScheduleEditController.java" />
         <option value="$PROJECT_DIR$/src/Schedule/Layouts/LoginLayout/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/Schedule/DataBase/LessonsData.java" />
         <option value="$PROJECT_DIR$/src/Schedule/Layouts/WelcomeLayout/SetOrViewController.java" />
       </list>
     </option>
@@ -643,7 +639,7 @@
       <workItem from="1535711083538" duration="222000" />
       <workItem from="1536341452151" duration="506000" />
       <workItem from="1536342127440" duration="2311000" />
-      <workItem from="1536345964852" duration="3677000" />
+      <workItem from="1536345964852" duration="5286000" />
     </task>
     <task id="LOCAL-00001" summary="bug fix">
       <created>1536344118327</created>
@@ -677,7 +673,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172009000" />
+    <option name="totallyTimeSpent" value="173618000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -839,14 +835,6 @@
     <entry file="das://3252d715-423e-4e74-af84-511e5181aacf/schema/dasacucak/table/antikyan_1_b_firstsemester" />
     <entry file="file://$PROJECT_DIR$/src/Schedule/Layouts/EditLayout/TableEdit.java" />
     <entry file="file://$PROJECT_DIR$/src/Schedule/Layouts/AutoFIllLayout/AutoFill.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/Schedule/Layouts/ShowLayout/Schedule.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="26" column="45" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Schedule/Layouts/AutoFIllLayout/AutoFillController.java" />
     <entry file="das://3252d715-423e-4e74-af84-511e5181aacf/schema/dasacucak/table/antikyan_1_d_first_semester">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -980,28 +968,8 @@
     <entry file="file://$PROJECT_DIR$/src/test/Schedule/DataBase/GetUsersTest.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Schedule/DataBase/LessonsData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/Schedule/DataBase/LessonsDataTest.java">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Schedule/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/Schedule/MainTest.java">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1035,32 +1003,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Schedule/Layouts/LoginLayout/Login.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/Schedule/Layouts/ShowLayout/SchoolController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="23" column="156" lean-forward="true" selection-start-line="23" selection-start-column="128" selection-end-line="23" selection-end-column="156" />
+        <state relative-caret-position="167">
+          <caret line="100" column="25" selection-start-line="100" selection-start-column="25" selection-end-line="100" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Schedule/Layouts/ShowLayout/SchoolController.java">
+    <entry file="file://$PROJECT_DIR$/src/Schedule/Layouts/LoginLayout/Login.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="99" column="103" lean-forward="true" selection-start-line="98" selection-start-column="7" selection-end-line="99" selection-end-column="103" />
+        <state relative-caret-position="506">
+          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Schedule/Layouts/ShowLayout/Schedule.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-417">
+          <caret line="26" column="45" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Schedule/Layouts/LoginLayout/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="53" column="143" selection-start-line="50" selection-start-column="8" selection-end-line="53" selection-end-column="143" />
+        <state relative-caret-position="-1243">
+          <caret line="56" column="35" lean-forward="true" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Schedule/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Schedule/DataBase/LessonsData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="111" column="8" lean-forward="true" selection-start-line="111" selection-start-column="8" selection-end-line="112" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Schedule/Layouts/WelcomeLayout/SetOrViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-571">
-          <caret line="80" column="36" lean-forward="true" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
+        <state relative-caret-position="213">
+          <caret line="112" column="65" selection-start-line="112" selection-start-column="65" selection-end-line="112" selection-end-column="65" />
         </state>
       </provider>
     </entry>
