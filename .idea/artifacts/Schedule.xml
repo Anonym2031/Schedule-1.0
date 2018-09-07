@@ -1,21 +1,21 @@
 <component name="ArtifactManager">
-  <artifact type="javafx" name="untitled1">
-    <output-path>$PROJECT_DIR$/out/artifacts/untitled1</output-path>
+  <artifact type="javafx" name="Schedule">
+    <output-path>$PROJECT_DIR$/out/artifacts/Schedule</output-path>
     <properties id="javafx-properties">
       <options>
-        <option name="appClass" value="sample.Main" />
+        <option name="appClass" value="Schedule.Main" />
         <option name="description" value="" />
         <option name="height" value="600" />
         <option name="htmlPlaceholderId" value="" />
         <option name="nativeBundle" value="all" />
-        <option name="title" value="Dasacucak 1.0" />
+        <option name="title" value="" />
         <option name="vendor" value="" />
-        <option name="version" value="1.0" />
+        <option name="version" value="" />
         <option name="width" value="800" />
       </options>
     </properties>
     <root id="root">
-      <element id="archive" name="untitled1.jar">
+      <element id="archive" name="Schedule.jar">
         <element id="module-output" name="Schedule" />
       </element>
       <element id="library" level="project" name="mysql-connector-java-8.0.12" />

@@ -1,6 +1,7 @@
 package Schedule.Layouts.WelcomeLayout;
 
 import Schedule.DataBase.GetUsers;
+import Schedule.DataBase.LessonsData;
 import Schedule.Layouts.LoginLayout.LoginController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -44,6 +45,7 @@ public class SetOrViewController {
     void initialize() {
         GetUsers GetUsers = new GetUsers();
         String login = LoginController.getLoginText();
+        LessonsData lessonsData = new LessonsData();
         GetUsers.getUserName(login);
         directorName.setText("Բարի գալուստ հարգելի " + GetUsers.getFirstName() + " " + GetUsers.getLastName() + "  , դասացուցակը փոփոխելու համար  ընտրեք  Փոփոխել տարբերակը");
         schoolName.setText("Դպրոց - " + GetUsers.getSchoolNumber());
@@ -51,9 +53,9 @@ public class SetOrViewController {
 
         //Schedule edit button event
         EditText.setOnMouseClicked(event -> {
-            EditText.setStyle("-fx-background-color: GREEN");
+            lessonsData.Music();
             try {
-                TimeUnit.SECONDS.sleep((long) 0.2);
+                TimeUnit.SECONDS.sleep((long) 0.7);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -80,9 +82,9 @@ public class SetOrViewController {
 
         //Schedule view button event
         ViewText.setOnMouseClicked(event -> {
-            ViewText.setStyle("-fx-background-color: GREEN");
+            lessonsData.Music();
             try {
-                TimeUnit.SECONDS.sleep((long) 0.2);
+                TimeUnit.SECONDS.sleep((long) 0.7);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -113,9 +115,9 @@ public class SetOrViewController {
         back.setOnMouseMoved(event -> back.setImage(back_selected));
         back.setOnMouseExited(event -> back.setImage(back_image));
         back.setOnMouseClicked(event -> {
-            back.setStyle("-fx-background-color: GREEN");
+            lessonsData.Music();
             try {
-                TimeUnit.SECONDS.sleep((long) 0.2);
+                TimeUnit.SECONDS.sleep((long) 0.7);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

@@ -115,7 +115,7 @@ public class ScheduleEditController {
         LessonsEdit(fridayColumn1);
 
     }
-
+//Lessons editor
     private void LessonsEdit(TableColumn<TableViewer, String> columns) {
         columns.setOnEditCommit((TableColumn.CellEditEvent<TableViewer, String> event) -> {
             TablePosition<TableViewer, String> pos = event.getTablePosition();
@@ -130,24 +130,24 @@ public class ScheduleEditController {
             switch (colNumber) {
                 case 1:
                     column.setMonday(newLesson);
-                    lessonsData.SetLesson(login , schoolNumber1 , schoolKey1 , newLesson , query , row,"monday",semesterKey);
+                    lessonsData.SetLesson(login , schoolNumber1 , schoolKey1 , newLesson , row,"monday",semesterKey);
                     System.out.println(schoolNumber1 + " " + schoolKey1 + " " + semesterKey);
                     break;
                 case 2:
                     column.setTuesday(newLesson);
-                    lessonsData.SetLesson(login , schoolNumber1 , schoolKey1 , newLesson , query , row,"tuesday",semesterKey);
+                    lessonsData.SetLesson(login , schoolNumber1 , schoolKey1 , newLesson , row,"tuesday",semesterKey);
                     break;
                 case 3:
                     column.setWednesday(newLesson);
-                    lessonsData.SetLesson(login , schoolNumber1 , schoolKey1 , newLesson , query , row,"wednesday",semesterKey);
+                    lessonsData.SetLesson(login , schoolNumber1 , schoolKey1 , newLesson , row,"wednesday",semesterKey);
                     break;
                 case 4:
                     column.setThursday(newLesson);
-                    lessonsData.SetLesson(login , schoolNumber1 , schoolKey1 , newLesson , query , row,"thursday",semesterKey);
+                    lessonsData.SetLesson(login , schoolNumber1 , schoolKey1 , newLesson , row,"thursday",semesterKey);
                     break;
                 case 5:
                     column.setFriday(newLesson);
-                    lessonsData.SetLesson(login , schoolNumber1 , schoolKey1 , newLesson , query , row,"friday",semesterKey);
+                    lessonsData.SetLesson(login , schoolNumber1 , schoolKey1 , newLesson , row,"friday",semesterKey);
                     break;
             }
 

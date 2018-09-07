@@ -25,9 +25,6 @@ public class TableViewer {
         this.friday = friday;
     }
 
-    public TableViewer() {
-    }
-
     public String getMonday() {
         return monday;
     }

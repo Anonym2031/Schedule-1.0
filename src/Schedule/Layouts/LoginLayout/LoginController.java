@@ -2,6 +2,7 @@ package Schedule.Layouts.LoginLayout;
 
 import Schedule.DataBase.Const;
 import Schedule.DataBase.DataBaseHandler;
+import Schedule.DataBase.LessonsData;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,6 +14,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import javax.imageio.plugins.tiff.TIFFDirectory;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
@@ -47,7 +49,16 @@ public class LoginController extends DataBaseHandler {
     @FXML
     void initialize() {
     //login button event
-        sign.setOnMouseClicked(event -> ButtonSelect(sign));
+        LessonsData lessonsData = new LessonsData();
+        sign.setOnMouseClicked(event -> {
+            lessonsData.Music();
+            try {
+                TimeUnit.SECONDS.sleep((long) 0.7);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            ButtonSelect(sign);
+        });
         sign.setOnMouseMoved(event ->
                 sign.setStyle("-fx-background-color: green ; -fx-background-radius: 20 ;-fx-border-radius: 20 ; -fx-border-color: silver "));
         sign.setOnMouseExited(event ->
@@ -100,7 +111,7 @@ public class LoginController extends DataBaseHandler {
         }
         return rc;
     }
-
+//sign button select event
     private void ButtonSelect(Button sign) {
         {
             sign.setStyle("-fx-background-color: red  ; -fx-background-radius: 20 ;-fx-border-radius: 20 ; -fx-border-color: silver ");

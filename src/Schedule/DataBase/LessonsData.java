@@ -8,9 +8,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableView;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -35,7 +37,7 @@ public class LessonsData {
     }
 
     private static String semesterKey = "first_semester";
-
+//Data Initialization from DB
     public void intiDate(String login, String classNumber, String classKey,String semesterKey , String query ,ObservableList<TableViewer> tableViewers ) {
         GetUsers get_user = new GetUsers();
         get_user.getUserName(login);
@@ -58,11 +60,12 @@ public class LessonsData {
             e.printStackTrace();
         }
     }
-
+//class number switch
     public String SwitchClass(ComboBox<String> schoolSelect) {
         schoolSelect.setOnHidden(event -> schoolNumber = schoolSelect.getValue());
         return schoolNumber;
     }
+    //semester switch
     public String SwitchSemesterKey(ComboBox<String> schoolSelect3) {
         schoolSelect3.setOnHidden(event -> semesterKey = schoolSelect3.getValue());
         if(semesterKey.equals("1-ին Կիսամյակ"))
@@ -71,7 +74,7 @@ public class LessonsData {
             return "second_semester";
         }
     }
-
+//Class key switch
    public String SwitchClassKey(ComboBox<String> schoolSelect1 ,ComboBox<String> semesterSelect ,TableView<TableViewer> schoolTable, ObservableList<TableViewer> tableViewers,
                               String login , String query){
         schoolSelect1.setOnHidden(event -> {
@@ -108,10 +111,17 @@ public class LessonsData {
         });
         return schoolKey;
    }
+   //Back button event
     public void setBack(javafx.scene.image.ImageView back){
         Image back_selected = new Image("assets/back_selected.png");
         Image back_image = new Image("assets/back.png");
         back.setOnMouseClicked(event -> {
+            Music();
+            try {
+                TimeUnit.SECONDS.sleep((long) 0.7);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             back.setStyle("-fx-background-color: GREEN");
             try {
                 TimeUnit.SECONDS.sleep((long) 0.2);
@@ -139,16 +149,17 @@ public class LessonsData {
         back.setOnMouseExited(event -> back.setImage(back_image));
 
     }
-    public void SetLesson(String login , String schoolSelect2, String schoolSelect3 , String newLesson,
-                          String query, Integer row , String day, String semesterKey){
+    //Add or edit lessons in DB
+    public void SetLesson(String login, String schoolSelect2, String schoolSelect3, String newLesson,
+                          Integer row, String day, String semesterKey){
         GetUsers get_user = new GetUsers();
         get_user.getUserName(login);
         String schid = get_user.getSchID();
         DataBaseHandler dataBaseHandler = new DataBaseHandler();
-        Statement statement = null;
+        Statement statement;
         row = row + 1;
-        query = "UPDATE dasacucak." + schid + "_" + schoolSelect2 +"_" + schoolSelect3 +"_" + semesterKey + " SET "  + day + " ='" + newLesson + "' WHERE  id=" +
-                row +";";
+        String query = "UPDATE dasacucak." + schid + "_" + schoolSelect2 + "_" + schoolSelect3 + "_" + semesterKey + " SET " + day + " ='" + newLesson + "' WHERE  id=" +
+                row + ";";
         System.out.println(row+1 + " " + day + " " + newLesson + "     " + query);
 
         try {
@@ -158,6 +169,14 @@ public class LessonsData {
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
+
+    }
+    //mouse click music play
+    public void Music(){
+        String file = "src/assets/click.mp3";
+        Media sound = new Media(new File(file).toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
 
     }
 }
