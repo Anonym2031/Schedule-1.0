@@ -124,30 +124,29 @@ public class ScheduleEditController {
             Integer colNumber = pos.getColumn();
             String schoolNumber1 = lessonsData.SwitchClass(schoolSelect);
             String schoolKey1 = lessonsData.SwitchClassKey(schoolSelect1,semesterSelect, schoolTable1 , tableViewers, login, query);
-            String semesterKey = lessonsData.SwitchSemesterKey(semesterSelect);
 
             TableViewer column = event.getTableView().getItems().get(row);
             switch (colNumber) {
                 case 1:
                     column.setMonday(newLesson);
-                    lessonsData.SetLesson(login , schoolNumber1 , schoolKey1 , newLesson , row,"monday",semesterKey);
-                    System.out.println(schoolNumber1 + " " + schoolKey1 + " " + semesterKey);
+                    lessonsData.SetLesson(login , schoolNumber1 , schoolKey1 , newLesson , row,"monday",lessonsData.getSemesterKey());
+                    System.out.println(schoolNumber1 + " " + schoolKey1 + " " + lessonsData.getSemesterKey());
                     break;
                 case 2:
                     column.setTuesday(newLesson);
-                    lessonsData.SetLesson(login , schoolNumber1 , schoolKey1 , newLesson , row,"tuesday",semesterKey);
+                    lessonsData.SetLesson(login , schoolNumber1 , schoolKey1 , newLesson , row,"tuesday",lessonsData.getSemesterKey());
                     break;
                 case 3:
                     column.setWednesday(newLesson);
-                    lessonsData.SetLesson(login , schoolNumber1 , schoolKey1 , newLesson , row,"wednesday",semesterKey);
+                    lessonsData.SetLesson(login , schoolNumber1 , schoolKey1 , newLesson , row,"wednesday",lessonsData.getSemesterKey());
                     break;
                 case 4:
                     column.setThursday(newLesson);
-                    lessonsData.SetLesson(login , schoolNumber1 , schoolKey1 , newLesson , row,"thursday",semesterKey);
+                    lessonsData.SetLesson(login , schoolNumber1 , schoolKey1 , newLesson , row,"thursday",lessonsData.getSemesterKey());
                     break;
                 case 5:
                     column.setFriday(newLesson);
-                    lessonsData.SetLesson(login , schoolNumber1 , schoolKey1 , newLesson , row,"friday",semesterKey);
+                    lessonsData.SetLesson(login , schoolNumber1 , schoolKey1 , newLesson , row,"friday",lessonsData.getSemesterKey());
                     break;
             }
 

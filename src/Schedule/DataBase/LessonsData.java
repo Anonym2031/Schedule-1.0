@@ -66,14 +66,16 @@ public class LessonsData {
         return schoolNumber;
     }
     //semester switch
-    public String SwitchSemesterKey(ComboBox<String> schoolSelect3) {
-        schoolSelect3.setOnHidden(event -> semesterKey = schoolSelect3.getValue());
-        if(semesterKey.equals("1-ին Կիսամյակ"))
-            return "first_semester";
-        else {
-            return "second_semester";
-        }
-    }
+//    public String SwitchSemesterKey(ComboBox<String> schoolSelect3) {
+//        schoolSelect3.setOnHidden(event -> semesterKey = schoolSelect3.getValue());
+//        if(semesterKey.contains("1")) {
+//            System.out.println(semesterKey);
+//            return "first_semester";
+//        }
+//        else {
+//            return "second_semester";
+//        }
+//    }
 //Class key switch
    public String SwitchClassKey(ComboBox<String> schoolSelect1 ,ComboBox<String> semesterSelect ,TableView<TableViewer> schoolTable, ObservableList<TableViewer> tableViewers,
                               String login , String query){
@@ -95,7 +97,7 @@ public class LessonsData {
                     break;
             }
             semesterSelect.setOnHidden(event1 -> {
-                if(semesterSelect.getValue().equals("1-ին Կիսամյակ")) {
+                if(semesterSelect.getValue().contains("1")) {
                     semesterKey = "first_semester";
                     schoolTable.getItems().removeAll(tableViewers);
                     intiDate(login, schoolNumber, schoolKey,semesterKey , query,tableViewers);
