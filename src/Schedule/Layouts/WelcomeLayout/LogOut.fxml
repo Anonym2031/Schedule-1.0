@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="223.0" prefWidth="400.0" style="-fx-background-color: fafafa;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Schedule.Layouts.WelcomeLayout.LogOutController">
+   <children>
+      <AnchorPane prefHeight="66.0" prefWidth="400.0" style="-fx-background-color: #0a0042;">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Դասացուցակ" wrappingWidth="151.7366943359375">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="60.0" fitWidth="51.0" layoutX="335.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/school.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Text fill="#080cfd" layoutX="36.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Արդյո՞ք ցանկանում եք դուրս գալ" wrappingWidth="328.53668212890625">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="noButton" layoutX="232.0" layoutY="146.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="117.0" style="-fx-background-color: orange; -fx-background-radius: 20; -fx-border-color: silver; -fx-border-radius: 20;" text="Ոչ">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="yesButton" layoutX="49.0" layoutY="146.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="117.0" style="-fx-background-color: Orange; -fx-background-radius: 20; -fx-border-color: silver; -fx-border-radius: 20;" text="Այո">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -12,6 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -124,19 +125,19 @@ public class SetOrViewController {
             back.getScene().getWindow().hide();
             Parent root;
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Schedule/Layouts/LoginLayout/Login.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Schedule/Layouts/WelcomeLayout/LogOut.fxml"));
                 root = loader.load();
                 Stage stage = new Stage();
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
                 stage.initOwner(back.getScene().getWindow());
-                stage.getIcons().add(new Image("assets/school.png"));
-                stage.setTitle("Schedule 1.0");
+                stage.initStyle(StageStyle.UNDECORATED);
                 stage.show();
             } catch (Exception exc) {
                 exc.printStackTrace();
             }
         });
+
 
     }
 }
